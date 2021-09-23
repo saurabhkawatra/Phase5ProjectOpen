@@ -9,12 +9,13 @@ pipeline {
                 stage('Deploy') { 
             steps {
                 sh "mvn package "
-            }
+            } 
+	}
 		stage('Execution') { 
             steps {
                 sh "java -jar Phase5ProjectOpen.jar"
             }
 	}
-        }
+
     }
 }
